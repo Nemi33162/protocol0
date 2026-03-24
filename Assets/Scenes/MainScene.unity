@@ -852,9 +852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654c9257c9571e1499a61fe1199404bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieSpawner
-  zombiePrefab: {fileID: 6459203034663601374, guid: 081a99f9936cc684297e630378bd6fec, type: 3}
+  zombiePrefab: {fileID: 226000517524304613, guid: 359834539876d1341a3842ae36775096, type: 3}
   player: {fileID: 1142851161}
-  spawnRate: 3
+  spawnRate: 5
   spawnDistance: 20
 --- !u!4 &1511920273
 Transform:
@@ -1288,18 +1288,6 @@ PrefabInstance:
     - target: {fileID: 226000517524304613, guid: 359834539876d1341a3842ae36775096, type: 3}
       propertyPath: m_Name
       value: Zombie
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912962921464336397, guid: 359834539876d1341a3842ae36775096, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912962921464336397, guid: 359834539876d1341a3842ae36775096, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912962921464336397, guid: 359834539876d1341a3842ae36775096, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: 7444489018610137215, guid: 359834539876d1341a3842ae36775096, type: 3}
       propertyPath: m_LocalPosition.x
