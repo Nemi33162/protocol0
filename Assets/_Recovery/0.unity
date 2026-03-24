@@ -394,6 +394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ZombieFollow
   player: {fileID: 1142851161}
   speed: 2
+  damageDistance: 2
+  damageRate: 1
 --- !u!136 &641801442
 CapsuleCollider:
   m_ObjectHideFlags: 0

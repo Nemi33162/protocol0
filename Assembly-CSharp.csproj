@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
     <Compile Include="Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
+    <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
     <Compile Include="Assets\ZombieFollow.cs" />
   </ItemGroup>
