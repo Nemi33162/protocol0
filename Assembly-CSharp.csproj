@@ -53,6 +53,7 @@
     <Compile Include="Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\ZombieSpawner.cs" />
     <Compile Include="Assets\PlayerHealth.cs" />
+    <Compile Include="Assets\Shirtless zombies\ShirtlessZombieFree\Scripts\FreeZombie_EyesGlow.cs" />
     <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
     <Compile Include="Assets\ZombieFollow.cs" />
   </ItemGroup>

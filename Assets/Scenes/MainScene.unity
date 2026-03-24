@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654c9257c9571e1499a61fe1199404bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieSpawner
-  zombiePrefab: {fileID: 226000517524304613, guid: 359834539876d1341a3842ae36775096, type: 3}
+  zombiePrefab: {fileID: 6459203034663601374, guid: 081a99f9936cc684297e630378bd6fec, type: 3}
   player: {fileID: 1142851161}
   spawnRate: 3
   spawnDistance: 20
@@ -1277,7 +1277,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4459864851551516607, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
   m_PrefabInstance: {fileID: 2040740442}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7520766391490090393
+--- !u!1001 &4218022839711092145
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1289,17 +1289,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 5912962921464336397, guid: 359834539876d1341a3842ae36775096, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912962921464336397, guid: 359834539876d1341a3842ae36775096, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912962921464336397, guid: 359834539876d1341a3842ae36775096, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.11
+      objectReference: {fileID: 0}
     - target: {fileID: 7444489018610137215, guid: 359834539876d1341a3842ae36775096, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.7
+      value: 13.8802
       objectReference: {fileID: 0}
     - target: {fileID: 7444489018610137215, guid: 359834539876d1341a3842ae36775096, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.00001
       objectReference: {fileID: 0}
     - target: {fileID: 7444489018610137215, guid: 359834539876d1341a3842ae36775096, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.3
+      value: -33.61206
       objectReference: {fileID: 0}
     - target: {fileID: 7444489018610137215, guid: 359834539876d1341a3842ae36775096, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1329,10 +1341,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7904648967515571534, guid: 359834539876d1341a3842ae36775096, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1142851161}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1351,5 +1359,5 @@ SceneRoots:
   - {fileID: 453515246}
   - {fileID: 268741443}
   - {fileID: 1069316844}
-  - {fileID: 7520766391490090393}
   - {fileID: 1511920273}
+  - {fileID: 4218022839711092145}
