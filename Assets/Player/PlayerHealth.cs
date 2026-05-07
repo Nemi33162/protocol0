@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
     public Slider healthBar;
 
+    private bool isDead = false;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -17,20 +19,36 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int AmountOfDamage)
     {
+        if (isDead) return;
+
         currentHealth -= AmountOfDamage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
         healthBar.value = currentHealth;
 
         Debug.Log("Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
-            currentHealth = 0;
             Die();
         }
     }
 
     private void Die()
     {
+        isDead = true;
+
         Debug.Log("Player has died.");
+
+        var controller = GetComponent<CharacterController>();
+        if (controller != null)
+            controller.enabled = false;
+
+        var fps = GetComponent<FirstPersonController>();
+        if (fps != null)
+            fps.enabled = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

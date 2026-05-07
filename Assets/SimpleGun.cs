@@ -15,21 +15,29 @@ public class SimpleGun : MonoBehaviour
         }
     }
 
-    void Shoot()
+void Shoot()
+{
+    Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+    RaycastHit hit;
+
+    if (Physics.Raycast(ray, out hit, range))
     {
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        RaycastHit hit;
+        Debug.Log("Hit: " + hit.collider.name);
 
-        if (Physics.Raycast(ray, out hit, range))
+        ZombieAI zombie = hit.collider.GetComponentInParent<ZombieAI>();
+
+        if (zombie != null)
         {
-            Debug.Log("Hit: " + hit.collider.name);
+            int finalDamage = (int)damage;
 
-            EnemyHealth enemy = hit.collider.GetComponent<EnemyHealth>();
-
-            if (enemy != null)
+            if (hit.collider.CompareTag("Head"))
             {
-                enemy.TakeDamage(damage);
+                finalDamage *= 2;
+                Debug.Log("HEADSHOT");
             }
+
+            zombie.TakeDamage(finalDamage);
         }
     }
+}
 }
