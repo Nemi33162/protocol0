@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3993574977259455422}
   - component: {fileID: 9135553789225434242}
   - component: {fileID: 207568617325003851}
+  - component: {fileID: 5124456996544723610}
+  - component: {fileID: 4501031906973300152}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -107,11 +109,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e000af2a27ed78045a1656fff975d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieFollow
+  navAgent: {fileID: 5124456996544723610}
+  capsuleCollider: {fileID: 9135553789225434242}
+  animator: {fileID: 4501031906973300152}
+  currentState: 0
   player: {fileID: 0}
-  speed: 2
-  rotationSpeed: 5
-  damageDistance: 2
-  damageRate: 1
+  chaseDistance: 20
+  attackDistance: 2
+  attackCooldown: 2
+  attackDelay: 1.5
+  damage: 10
+  health: 100
+  roamRadius: 10
+  roamDelay: 3
+  idleWaitTime: 2
 --- !u!54 &3993574977259455422
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -120,7 +131,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226000517524304613}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -135,7 +146,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
@@ -175,6 +186,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 100
+--- !u!195 &5124456996544723610
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226000517524304613}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!95 &4501031906973300152
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226000517524304613}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e2c1c24aec0aaa94eb4cb7a2aae271a0, type: 3}
+  m_Controller: {fileID: 9100000, guid: 56e048a437de6d142bdaf8f0addf39f6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &3071171208523695963
 PrefabInstance:
   m_ObjectHideFlags: 0
