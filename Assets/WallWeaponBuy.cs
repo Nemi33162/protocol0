@@ -11,12 +11,19 @@ public class WallWeaponBuy : MonoBehaviour
     private bool playerNear = false;
     private PlayerPoints playerPoints;
 
+
+    public AudioSource audioSource;
+    public AudioClip buySound;
+
+
     void Update()
     {
         if (playerNear && playerPoints != null && Input.GetKeyDown(interactKey))
         {
             if (playerPoints.SpendPoints(cost))
             {
+
+		audioSource.PlayOneShot(buySound);
                 GiveWeapon();
             }
         }

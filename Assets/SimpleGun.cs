@@ -6,6 +6,8 @@ public class SimpleGun : MonoBehaviour
     public float damage = 25f;
     public float range = 100f;
     public KeyCode shootKey = KeyCode.Mouse0;
+    public AudioSource audioSource;
+    public AudioClip shootSound;
 
     void Update()
     {
@@ -19,6 +21,9 @@ void Shoot()
 {
     Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
     RaycastHit hit;
+
+	audioSource.PlayOneShot(shootSound);
+
 
     if (Physics.Raycast(ray, out hit, range))
     {

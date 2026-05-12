@@ -9,13 +9,19 @@ public class buyGate : MonoBehaviour
     private bool playerNear = false;
     private PlayerPoints playerPoints;
 
+    public AudioSource audioSource;
+    public AudioClip buySound;
+
     void Update()
     {
         if (playerNear && playerPoints != null && Input.GetKeyDown(interactKey))
         {
             if (playerPoints.SpendPoints(cost))
             {
-                gateToOpen.SetActive(false);
+
+		audioSource.PlayOneShot(buySound);
+
+                gateToOpen.transform.position += new Vector3(0, 5, 0);
 
                 Debug.Log("Gate opened!");
             }
