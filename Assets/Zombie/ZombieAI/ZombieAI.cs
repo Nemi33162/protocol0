@@ -21,6 +21,11 @@ public class ZombieAI : MonoBehaviour
     public int damage = 10;
     public int health = 100;
 
+	
+	public int hitPoints = 10;
+	public int killPoints = 50;
+
+
     public float roamRadius = 10f;
     public float idleWaitTime = 2f;
 
@@ -157,21 +162,36 @@ public class ZombieAI : MonoBehaviour
         isAttacking = false;
     }
 
-    // 🔥 THIS is now your ONLY damage entry point
     public void TakeDamage(int damageAmount)
+{
+    if (isDead) return;
+
+    // find player points system
+    PlayerPoints playerPoints = FindObjectOfType<PlayerPoints>();
+
+    // +10 per hit
+    if (playerPoints != null)
     {
-        if (isDead) return;
-
-        health -= damageAmount;
-        Debug.Log("Damage taken: " + damage);
-
-
-        if (health <= 0)
-        {
-            health = 0;
-            Die();
-        }
+        playerPoints.AddPoints(hitPoints);
     }
+
+    health -= damageAmount;
+
+    Debug.Log("Damage taken: " + damageAmount);
+
+    if (health <= 0)
+    {
+        health = 0;
+
+        // +50 on kill
+        if (playerPoints != null)
+        {
+            playerPoints.AddPoints(killPoints);
+        }
+
+        Die();
+    }
+}
 
 void Die()
 {
