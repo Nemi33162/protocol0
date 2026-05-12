@@ -4,17 +4,20 @@ public class buyGate : MonoBehaviour
 {
     public int cost = 500;
     public KeyCode interactKey = KeyCode.E;
+    public GameObject gateToOpen;
 
     private bool playerNear = false;
     private PlayerPoints playerPoints;
 
     void Update()
     {
-        if (playerNear && Input.GetKeyDown(interactKey))
+        if (playerNear && playerPoints != null && Input.GetKeyDown(interactKey))
         {
             if (playerPoints.SpendPoints(cost))
             {
-                gameObject.SetActive(false); // removes gate
+                gateToOpen.SetActive(false);
+
+                Debug.Log("Gate opened!");
             }
         }
     }

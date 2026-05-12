@@ -6,24 +6,42 @@ public class WallWeaponBuy : MonoBehaviour
     public KeyCode interactKey = KeyCode.E;
 
     public GameObject weaponToGive;
+    public GameObject[] allWeapons;
 
     private bool playerNear = false;
     private PlayerPoints playerPoints;
 
     void Update()
     {
-        if (playerNear && Input.GetKeyDown(interactKey))
+        if (playerNear && playerPoints != null && Input.GetKeyDown(interactKey))
         {
             if (playerPoints.SpendPoints(cost))
             {
-                weaponToGive.SetActive(true);
-                Debug.Log("Weapon bought!");
+                GiveWeapon();
             }
         }
     }
 
+    void GiveWeapon()
+    {
+        // turn off all guns
+        foreach (GameObject gun in allWeapons)
+        {
+            gun.SetActive(false);
+        }
+
+        // turn on selected gun
+        weaponToGive.SetActive(true);
+
+        Debug.Log("Bought weapon: " + weaponToGive.name);
+    }
+
     void OnTriggerEnter(Collider other)
     {
+
+	Debug.Log("Entered trigger");
+
+
         if (other.CompareTag("Player"))
         {
             playerNear = true;
