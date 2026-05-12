@@ -1160,6 +1160,135 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9c16c2b0ef8205a45823521d6ed61d12, type: 3}
   m_PrefabInstance: {fileID: 174132777}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &175034665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175034667}
+  - component: {fileID: 175034666}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &175034666
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175034665}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 0f0bd2503e57245f189adb678c18293c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &175034667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175034665}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 109.28227, y: 0.3373, z: 10.53997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189496315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,8 +2123,8 @@ MonoBehaviour:
   - {fileID: 775452105}
   - {fileID: 398269883}
   - {fileID: 621190253}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 1434342148}
+  buySound: {fileID: 8300000, guid: e8210ab1fe6784e7eb15956b135716c9, type: 3}
 --- !u!65 &361171147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3035,9 +3164,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 719430008}
-    - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 914166661}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
@@ -3608,7 +3734,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 914166661}
   m_Father: {fileID: 1868165983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &719430009
@@ -3626,8 +3753,8 @@ MonoBehaviour:
   cost: 500
   interactKey: 101
   gateToOpen: {fileID: 1868165982}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 1434342148}
+  buySound: {fileID: 8300000, guid: 4031e628cfc564d93ac39f8955afbbda, type: 3}
 --- !u!65 &719430010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4308,12 +4435,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914166660}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1868165983}
+  m_Father: {fileID: 719430008}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &914166662
 AudioSource:
@@ -4469,8 +4596,8 @@ MonoBehaviour:
   - {fileID: 775452105}
   - {fileID: 398269883}
   - {fileID: 621190253}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 914166662}
+  buySound: {fileID: 8300000, guid: e8210ab1fe6784e7eb15956b135716c9, type: 3}
 --- !u!65 &927392284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4668,8 +4795,8 @@ MonoBehaviour:
   - {fileID: 775452105}
   - {fileID: 398269883}
   - {fileID: 621190253}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 1434342148}
+  buySound: {fileID: 8300000, guid: e8210ab1fe6784e7eb15956b135716c9, type: 3}
 --- !u!65 &936553733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5174,12 +5301,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039691118}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 795112841}
+  m_Father: {fileID: 1573803245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1039691120
 AudioSource:
@@ -5308,7 +5435,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1434342147}
   m_Father: {fileID: 370504976}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1053030085
@@ -5326,8 +5454,8 @@ MonoBehaviour:
   cost: 500
   interactKey: 101
   gateToOpen: {fileID: 370504975}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 1434342148}
+  buySound: {fileID: 8300000, guid: 4031e628cfc564d93ac39f8955afbbda, type: 3}
 --- !u!65 &1053030086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8072,12 +8200,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434342146}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 370504976}
+  m_Father: {fileID: 1053030084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1434342148
 AudioSource:
@@ -8242,9 +8370,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1053030084}
-    - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1434342147}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
@@ -8611,9 +8736,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2089681753}
-    - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2043100684}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
@@ -8890,8 +9012,8 @@ MonoBehaviour:
   - {fileID: 775452105}
   - {fileID: 398269883}
   - {fileID: 621190253}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 914166662}
+  buySound: {fileID: 8300000, guid: e8210ab1fe6784e7eb15956b135716c9, type: 3}
 --- !u!65 &1512639926
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9114,8 +9236,8 @@ MonoBehaviour:
   - {fileID: 775452105}
   - {fileID: 398269883}
   - {fileID: 621190253}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 1434342148}
+  buySound: {fileID: 8300000, guid: e8210ab1fe6784e7eb15956b135716c9, type: 3}
 --- !u!65 &1543690309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9843,7 +9965,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1039691119}
   m_Father: {fileID: 795112841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1573803246
@@ -9882,8 +10005,8 @@ MonoBehaviour:
   cost: 500
   interactKey: 101
   gateToOpen: {fileID: 795112840}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 914166662}
+  buySound: {fileID: 8300000, guid: 4031e628cfc564d93ac39f8955afbbda, type: 3}
 --- !u!1001 &1592073730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10156,9 +10279,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1573803245}
-    - targetCorrespondingSourceObject: {fileID: 400000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1039691119}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 86c7741ccc195104ea92fc4828014cca, type: 3}
       insertIndex: -1
@@ -10835,8 +10955,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.815587, y: 4.4861712, z: 6.3204513}
-  m_Center: {x: -4.9077935, y: 2.2430851, z: -2.6670732}
+  m_Size: {x: 9.550038, y: 4.4861712, z: 5.8178005}
+  m_Center: {x: -4.7750425, y: 2.2430851, z: -2.9183986}
 --- !u!1001 &1715887339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13313,12 +13433,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043100683}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 362418716}
+  m_Father: {fileID: 2089681753}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2043100685
 AudioSource:
@@ -13604,7 +13724,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2043100684}
   m_Father: {fileID: 362418716}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2089681754
@@ -13622,8 +13743,8 @@ MonoBehaviour:
   cost: 500
   interactKey: 101
   gateToOpen: {fileID: 362418715}
-  audioSource: {fileID: 0}
-  buySound: {fileID: 0}
+  audioSource: {fileID: 1434342148}
+  buySound: {fileID: 8300000, guid: 4031e628cfc564d93ac39f8955afbbda, type: 3}
 --- !u!65 &2089681755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14024,3 +14145,4 @@ SceneRoots:
   - {fileID: 1998561182}
   - {fileID: 1797617946}
   - {fileID: 1500645798}
+  - {fileID: 175034667}
